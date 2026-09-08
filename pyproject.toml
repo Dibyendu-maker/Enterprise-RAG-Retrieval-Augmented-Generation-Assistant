@@ -1,0 +1,30 @@
+[project]
+name = "enterprise-rag-assistant"
+version = "0.1.0"
+description = "Enterprise RAG Assistant with FastAPI, ChromaDB, Sentence Transformers, Ollama, and SQLite"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "aiosqlite>=0.20.0",
+    "bcrypt>=4.0.0",
+    "chromadb>=0.5.0",
+    "fastapi>=0.115.0",
+    "httpx>=0.27.0",
+    "pydantic-settings>=2.4.0",
+    "pyjwt[crypto]>=2.9.0",
+    "pypdf>=4.3.0",
+    "python-multipart>=0.0.9",
+    "sentence-transformers>=3.0.0",
+    "sqlalchemy>=2.0.0",
+    "uvicorn[standard]>=0.30.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
